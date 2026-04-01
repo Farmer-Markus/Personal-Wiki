@@ -1,0 +1,8 @@
+site_name: Personal knowledge & problem solving wiki
+size_description: My wiki to save my knowledge and solved problems
+size_author: Farmer_Markus
+copyright: © 2026. CC BY-SA 4.0
+theme:
+  name: material
+  palette:
+    scheme: slate
