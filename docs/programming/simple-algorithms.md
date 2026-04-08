@@ -3,7 +3,7 @@
 ## Split number into digits
 Example: `int num = 123; -> 1, 2, 3`
 
-``` C
+``` cpp linenums="1"
 std::vector<int> digits;
 
 int num = 123;
