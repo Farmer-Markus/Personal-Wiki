@@ -9,6 +9,7 @@ Stuff that will be documented:
 - Programming related problems
 - Helpfull stuff I learned about programming
 - Technical details about the Nintendo DS
+- Other Technical stuff
 
 But I wanted to share this with everyone. <br>
 Maybe this will help someone :)
