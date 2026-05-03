@@ -17,3 +17,5 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.extra
+  - pymdownx.tilde
