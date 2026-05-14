@@ -19,12 +19,31 @@ sudo modprobe v4l2loopback exclusive_caps=1 card_label="Android-Webcam"
 Now you have a virtual camera. Now we will use the phone as camera. <br>
 First of all, **_Very important!_** You need to enable **_[developer options](https://developer.android.com/studio/debug/dev-options)_** on your phone.S
 
+And also run the following command to list all video devices:
+``` bash
+v4l2-ctl --list-devices
+```
+
+You need to **remember** the video device to use in later commands!
+Possible output might be:
+``` bash
+Android-Webcam (platform:v4l2loopback-000):
+	/dev/video2
+
+Integrated Camera: Integrated C (usb-0000:00:14.0-8):
+	/dev/video0
+	/dev/video1
+	/dev/media0
+```
+
+So I need to remember **/dev/video2**
+
 
 ### Wired
 To use your phone as usb cam, enable **_Usb Debugging_** in the developer settings.
 Plug your phone into your computer using a usb cable and use the following command to activate the camera streaming:
 ``` bash
-scrcpy --video-source=camera --camera-size=1920x1080 --v4l2-sink=/dev/video0 -N
+scrcpy --video-source=camera --camera-size=1920x1080 --v4l2-sink=<the path of your virtual video device> -N
 ```
 
 In my example I'm using a camera resolution of **_1920x1080_** but you can change this however you want.
@@ -48,7 +67,7 @@ adb connect <your phones ip>:5555
 You may need to accept a popup on your phone.
 Now start the video stream with **_Scrcpy_** and your desired resolution. I'm using **_1920x1080_** but you can change this however you want.
 ``` bash
-scrcpy --video-source=camera --camera-size=1920x1080 --v4l2-sink=/dev/video0 -N
+scrcpy --video-source=camera --camera-size=1920x1080 --v4l2-sink=<the path of your virtual video device> -N
 ```
 
 Now your android camera should directly stream to your virtual camera device.
