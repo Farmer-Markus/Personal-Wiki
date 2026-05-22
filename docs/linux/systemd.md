@@ -38,3 +38,11 @@ Wants=dhcpcd@<network adapter>.service
 After=dhcpcd@eno1.service
 Wants=dhcpcd@eno1.service
 ```
+
+## Run systemd user service at boot without the need to log in manually
+
+Run the following command to enable auto execute for services at current user:
+
+``` bash
+sudo loginctl enable-linger $USER
+```
