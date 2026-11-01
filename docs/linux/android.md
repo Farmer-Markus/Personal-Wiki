@@ -6,7 +6,7 @@ I wanted to use my Samsung A21S as usb keyboard but the required kernel drivers 
 **IMPORTANT** you **will** need the kernel that supports your device and replace device specific parts of the commands! <br>
 I downloaded the [kernel](https://github.com/LineageOS/android_kernel_samsung_exynos850) for my device from Github and installed following packages:
 ``` bash
-sudo pacman -S clang llvm make android-tools 
+sudo pacman -S clang llvm make android-tools bc lld
 ```
 
 Inside the kernel repo, we need get the default config:
